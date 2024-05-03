@@ -39,9 +39,7 @@ class MainActivity : AppCompatActivity() {
                 tipResponse(progress)
                 computeTipAndTotal()
             }
-
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
