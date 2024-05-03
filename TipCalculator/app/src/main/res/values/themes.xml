@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TipCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/Primary_Purple</item>
+        <item name="colorPrimaryVariant">@color/Darker_Purple</item>
+        <item name="android:colorBackground">@color/Background_Purple</item>
+    </style>
+
+    <style name="Theme.TipCalculator" parent="Base.Theme.TipCalculator" />
+</resources>

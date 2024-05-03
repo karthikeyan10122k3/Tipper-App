@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--Header-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipper"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#01880F"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/baseLable"
+        android:layout_width="41dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="140dp"
+        android:text="Base"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--Views In Left-->
+    <TextView
+        android:id="@+id/tipPercentageLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/baseLable"
+        app:layout_constraintEnd_toStartOf="@+id/seekTipAmt"
+        app:layout_constraintTop_toBottomOf="@+id/baseLable"
+        tools:text="24%" />
+
+    <TextView
+        android:id="@+id/tipAmtLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="20dp"
+        android:text="Tip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tipPercentageLable"
+        app:layout_constraintEnd_toStartOf="@+id/tipAmt"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentageLable" />
+
+    <TextView
+        android:id="@+id/totalLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:text="Total Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tipAmtLable"
+        app:layout_constraintEnd_toStartOf="@+id/totalAmt"
+        app:layout_constraintTop_toBottomOf="@+id/tipAmtLable" />
+
+    <TextView
+        android:id="@+id/splitAmtLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        android:text="Split Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/splitCountLable"
+        app:layout_constraintEnd_toStartOf="@+id/splitAmt"
+        app:layout_constraintTop_toBottomOf="@+id/splitCountLable" />
+
+    <TextView
+        android:id="@+id/splitCountLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="16dp"
+        android:text="Split Count"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/totalLable"
+        app:layout_constraintEnd_toStartOf="@+id/splitCount"
+        app:layout_constraintTop_toBottomOf="@+id/totalLable" />
+
+
+    <!--Views In Right-->
+    <EditText
+        android:id="@+id/baseAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="8"
+        android:hint="Bill Amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/baseLable"
+        app:layout_constraintStart_toEndOf="@+id/baseLable"
+        app:layout_constraintTop_toTopOf="@+id/baseLable" />
+
+    <SeekBar
+        android:id="@+id/seekTipAmt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="50"
+        app:layout_constraintBottom_toBottomOf="@+id/tipPercentageLable"
+        app:layout_constraintStart_toStartOf="@+id/baseAmt"
+        app:layout_constraintTop_toTopOf="@+id/tipPercentageLable" />
+
+    <TextView
+        android:id="@+id/tipAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tipAmtLable"
+        app:layout_constraintStart_toStartOf="@+id/seekTipAmt"
+        app:layout_constraintTop_toTopOf="@+id/tipAmtLable"
+        tools:text="15.6" />
+
+    <TextView
+        android:id="@+id/totalAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/totalLable"
+        app:layout_constraintStart_toStartOf="@+id/tipAmt"
+        app:layout_constraintTop_toTopOf="@+id/totalLable"
+        tools:text="100.11" />
+
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/seekTipAmt"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="@+id/seekTipAmt"
+        app:layout_constraintTop_toBottomOf="@+id/seekTipAmt"
+        tools:text="response" />
+
+    <Button
+        android:id="@+id/splitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Split the Bill?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmt" />
+
+    <EditText
+        android:id="@+id/splitCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="no of People"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/splitCountLable"
+        app:layout_constraintStart_toStartOf="@+id/splitBtn"
+        app:layout_constraintTop_toTopOf="@+id/splitCountLable" />
+
+
+    <TextView
+        android:id="@+id/splitAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/splitAmtLable"
+        app:layout_constraintStart_toStartOf="@+id/splitCount"
+        app:layout_constraintTop_toTopOf="@+id/splitAmtLable"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="101.0" />
+
+
+    <!--Footer-->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Made By Karthikeyan R"
+        android:textAlignment="center"
+        android:textColor="#F81100"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
